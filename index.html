@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Agustín Pugliese — Diseñador web freelance en Buenos Aires. Experiencias digitales minimalistas y funcionales.">
+
+  <title>Agustín Pugliese · Web Designer</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="img/favicon.png">
+
+  <!-- Google Fonts: Work Sans (cuerpo) y Crimson Text (títulos) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500&family=Crimson+Text:wght@400&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <script src="script.js" defer></script> 
+</head>
+<body>
+
+  <!-- SVG Filters (un único bloque, consolidado) -->
+  <svg aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden">
+    <defs>
+      <filter id="liquid-distortion" x="-20%" y="-20%" width="140%" height="140%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.004" numOctaves="2" seed="2" result="noise"/>
+        <feGaussianBlur in="noise" stdDeviation="1.1" result="blurred"/>
+        <feDisplacementMap in="SourceGraphic" in2="blurred" scale="18"/>
+      </filter>
+      <filter id="glass-distortion">
+        <feTurbulence type="fractalNoise" baseFrequency="0.015 0.03" numOctaves="2" seed="8" result="noise"/>
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="18" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+    </defs>
+  </svg>
+
+  <!-- HEADER -->
+  <header class="main-header" id="main-header">
+    <a href="#hero" class="site-signature">✹Agustin Pugliese✹</a>
+    <nav class="liquid-nav" aria-label="Navegación principal">
+      <div class="nav-links">
+        <a href="#about">Sobre mí</a>
+        <a href="#projects">Proyectos</a>
+        <a href="#contact">Contacto</a>
+      </div>
+    </nav>
+    <div class="portfolio-label">Portfolio 2026</div>
+  </header>
+
+  <!-- HERO -->
+  <section id="hero">
+    <video class="hero-video" autoplay muted loop playsinline preload="auto">
+      <source src="hero-video.mp4" type="video/mp4">
+    </video>
+    <div class="hero-fade" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <h1 class="hero-title">
+        <span class="hero-title-web">Web</span>
+        <span class="hero-title-designer">Designer</span>
+      </h1>
+      <p class="hero-sub">
+        Diseño experiencias digitales minimalistas y funcionales.
+        Buenos Aires, Argentina.
+      </p>
+    </div>
+
+    <!-- FIX: hero-scroll-line es la clase que usa el CSS -->
+    <div class="hero-scroll" aria-hidden="true">
+      <div class="hero-scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about-content" data-fade>
+      <div class="about-text-section">
+        <p class="about-label">Sobre mí</p>
+        <h2 class="about-title">Diseño con<br>propósito.</h2>
+        <div class="about-text">
+          <p>
+            Soy diseñador web con foco en el detalle tipográfico y la experiencia de usuario.
+            Creo que el buen diseño no se ve: se siente.
+          </p>
+          <p>
+            Mi trabajo combina estética minimalista con funcionalidad real.
+            Trabajo con marcas, startups y creativos que quieren presencia digital que diferencie.
+          </p>
+          <p>
+            Disponible para proyectos freelance y colaboraciones en todo el mundo.
+          </p>
+        </div>
+      </div>
+      <div class="about-video-wrapper">
+        <video class="about-video" autoplay muted loop playsinline preload="none">
+          <source src="video.mp4" type="video/mp4">
+        </video>
+        <div class="about-video-fade" aria-hidden="true"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS CAROUSEL -->
+  <section id="skills">
+    <div class="skills-wrapper" data-fade>
+      <div class="skills-header">
+        <p class="skills-label">Stack Tecnológico</p>
+        <h2 class="skills-title">Lenguajes & Herramientas</h2>
+      </div>
+      
+      <div class="carousel-container">
+        <button class="carousel-btn carousel-prev" aria-label="Anterior" title="Anterior">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        
+        <div class="carousel-track">
+          <div class="carousel-item">
+            <div class="skill-icon">
+              <i class="fab fa-html5"></i>
+            </div>
+            <p class="skill-name">HTML5</p>
+          </div>
+          <div class="carousel-item">
+            <div class="skill-icon">
+              <i class="fab fa-css3-alt"></i>
+            </div>
+            <p class="skill-name">CSS3</p>
+          </div>
+          <div class="carousel-item">
+            <div class="skill-icon">
+              <i class="fab fa-js"></i>
+            </div>
+            <p class="skill-name">JavaScript</p>
+          </div>
+          <div class="carousel-item">
+            <div class="skill-icon">
+              <i class="fab fa-react"></i>
+            </div>
+            <p class="skill-name">React</p>
+          </div>
+          <div class="carousel-item">
+            <div class="skill-icon">
+              <i class="fas fa-pen-ruler"></i>
+            </div>
+            <p class="skill-name">Figma</p>
+          </div>
+          <div class="carousel-item">
+            <div class="skill-icon">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <p class="skill-name">Responsive</p>
+          </div>
+        </div>
+        
+        <button class="carousel-btn carousel-next" aria-label="Siguiente" title="Siguiente">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+      
+      <div class="carousel-dots">
+        <button class="dot active" aria-label="Ir al grupo 1"></button>
+        <button class="dot" aria-label="Ir al grupo 2"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="section-header" data-fade>
+      <h2 class="section-title">Proyectos</h2>
+      <span class="section-count">02 trabajos</span>
+    </div>
+
+    <div class="projects-grid" data-fade data-fade-delay="0.15">
+
+      <article class="project-card">
+        <img
+          class="project-image"
+          src="img/proyecto-1.png"
+          alt="Bafe — Branding y Web Design"
+          loading="lazy"
+          decoding="async"
+          width="600" height="400">
+        <div class="project-overlay" aria-hidden="true"></div>
+        <div class="project-info">
+          <div class="project-meta">
+            <h3 class="project-name">Bafe</h3>
+            <p class="project-desc">Branding · Web Design</p>
+          </div>
+          <!-- FIX: rel="noreferrer" solo → rel="noopener noreferrer" -->
+          <a href="https://bafe-accs.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-link">
+            Ver <span class="arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+        <div class="project-shine" aria-hidden="true"></div>
+      </article>
+
+      <article class="project-card">
+        <img
+          class="project-image"
+          src="img/proyecto-2.png"
+          alt="Powerzone Gym — UI/UX y Frontend"
+          loading="lazy"
+          decoding="async"
+          width="600" height="400">
+        <div class="project-overlay" aria-hidden="true"></div>
+        <div class="project-info">
+          <div class="project-meta">
+            <h3 class="project-name">Powerzone Gym</h3>
+            <p class="project-desc">UI/UX · Frontend</p>
+          </div>
+          <!-- FIX: rel="noreferrer" solo → rel="noopener noreferrer" -->
+          <a href="https://agustinpugliese.github.io/Powerzone-Gym/" target="_blank" rel="noopener noreferrer" class="project-link">
+            Ver <span class="arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+        <div class="project-shine" aria-hidden="true"></div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-inner" data-fade>
+      <p class="contact-kicker">Disponible para nuevos proyectos</p>
+      <h2 class="contact-title">Hablemos.</h2>
+
+      <!-- FIX: estaba vacío + dominio @email.com incorrecto → @gmail.com -->
+      <a href="mailto:aguspugliese777@gmail.com" class="contact-email">
+        aguspugliese777@gmail.com
+      </a>
+
+      <div class="social-links">
+        <!-- FIX: faltaba código de país Argentina (+54) en WhatsApp -->
+        <a href="https://wa.me/5491128924456" target="_blank" rel="noopener noreferrer" title="WhatsApp" aria-label="Contactar por WhatsApp">
+          <i class="fab fa-whatsapp" aria-hidden="true"></i>
+        </a>
+        <a href="https://instagram.com/agus.pugli" target="_blank" rel="noopener noreferrer" title="Instagram" aria-label="Ver Instagram">
+          <i class="fab fa-instagram" aria-hidden="true"></i>
+        </a>
+        <a href="mailto:aguspugliese777@gmail.com" title="Gmail" aria-label="Enviar email">
+          <i class="fas fa-envelope" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Agustin Pugliese</p>
+    <p>Buenos Aires, Argentina</p>
+  </footer>
+
+</body>
+</html>
